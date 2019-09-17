@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function addNumber()
+        {
+            var result=confirm("Do you want to continue?")
+            if (result==true){
+            var a=parseInt((prompt("Enter the 1st number:")));
+            var b=parseInt((prompt("Enter the Second number:")));
+            // var c= parseInt(a)+parseInt(b);
+            // alert(a+"+"+b+"="+c)
+            alert(`${a} + ${b} = ${a+b}`)
+            }
+            else {
+                alert("Beep Beep");
+            }
+        }
+
+        function displayMessage()
+        {
+            // for(i=0;i<3;i++)
+                var check=new Date();
+                if(check.getHours()<12){
+                    alert("Hello Good Morning")
+                }
+                else if(check.getHours()>=12 && check.getHours()<18){
+                    alert("Hello Good Afternoon")
+                }
+                else if(check.getHours()>=18){
+                    alert("Good Evening");
+                }
+        }
+
+        function roomTemp(){
+            temp=35
+            return temp
+        }
+
+        function status(){
+            t= roomTemp()
+            if (t>30)
+                alert("Too Hot")
+            else
+                alert("Too Cold")
+        }
+
+        </script>
+    </head>
+    <body>
+        <!-- <input type="image" src="penguin.jpg"> -->
+        <input type="button" value="AddNumbers" onclick="addNumber()"> <br><br>
+        <input type="button" value="Greetings" onclick="displayMessage()"> <br><br>
+        <!-- <input type="button" value="Room Temperature" onclick="roomTemp(22)"> <br><br>
+        <input type="button" value="Room Temperature 2" onclick="roomTemp(24,23)"> <br><br> -->
+        <input type="button" value="Status" onclick="status()"> <br><br>
+
+    </body>
+</html>

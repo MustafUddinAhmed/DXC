@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            var fAmount=parseInt(prompt("Enter the bill:-"))
+            var today=new Date
+            if (today.getDate()>15){
+            var fineDay=today.getDate()-15
+            fAmount=fAmount + fineDay*50
+            alert(`Your bill amount is ${fAmount}`)
+            }
+            else
+                alert(`Your bill amount is ${fAmount}`)
+
+            // alert(today.getDate())
+        </script>
+    </head>
+</html>

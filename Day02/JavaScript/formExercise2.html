@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        function check(){
+            var n1= document.getElementById("number1").value;
+            var n2= document.getElementById("number2").value;
+            var e1= document.getElementById("error1")
+            var e2= document.getElementById("error2")
+            var res= document.getElementById("result")
+            
+            if(n1.length!=0 && n2.length!=0){
+                c=parseInt(n1)+parseInt(n2);
+                res.innerHTML="<font color=green>The Result of the addition is: </font>"+c
+            }
+            else if(n1.length==0){
+                e1.innerHTML="<font color=red>Please Enter the 1st number</font>"
+            }
+            else{
+                e1.innerHTML=""
+            }
+
+            if(n2.length==0){
+                e2.innerHTML="<font color=red>Please Enter the 2nd number</font>"
+            }
+            else{
+                e2.innerHTML=""
+            }
+        }
+            
+
+        </script>
+    </head>
+    <body>
+        <form>
+            Number 1: <input type="text" name="username" id="number1"><span id="error1"></span><br><br>
+            Number 2: <input type="text" name="username" id="number2"><span id="error2"></span><br><br>
+            <input type="button" value="Add" onclick="check()">
+            <div id="result"></div>
+        </form>
+    </body>
+</html>

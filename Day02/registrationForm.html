@@ -1,0 +1,96 @@
+<html>
+    <title>
+        DXC Registration Form
+    </title>
+    <body>
+        <h2>
+            <center><u>Registration Form</u></center>
+        </h2>
+
+        <!-- Form is used for controls on the page  -->
+
+        <form action="success.html">
+            <table cellspacing="10" cellpadding="10" align="center" bgcolor="#E9E3E1 ">
+               
+                <!-- Cellspacing is the spacing between two cells and Cell Padding is the spacing between text and the cell boarder -->
+                
+                <tr>
+                    <td>User Name: </td>
+                    <td><input type="text" name="userName" id="userName"> </td>
+                </tr>
+
+                <tr>
+                    <td>Password: </td>
+                    <td><input type="password" name="password" id="password"> </td>
+                </tr>
+
+                <tr>
+                    <td>Confirm Password: </td>
+                    <td><input type="password" name="confirmPassword" id="confirmPassword"> </td>
+                </tr>
+
+                <tr>
+                    <td>Full Name: </td>
+                    <td><input type="text" name="fullName" id="fullName"> </td>
+                </tr>
+
+                <!-- To Create Radio Button -->
+
+                <tr>
+                    <td>Gender: </td>
+                    <td>
+                        <input type="radio" name="gender" id="gender" value="Male" checked>Male
+                        <input type="radio" name="gender" id="gender" value="Female">Female
+                        <input type="radio" name="gender" id="gender" value="Others">Others
+                    </td>
+                </tr>
+
+                <!-- To Create Drop Down Button -->
+
+                <tr>
+                    <td>Qualification: </td>
+                    <td>
+                        <select name="qualification" id="qualification">
+                        <option value="Select">Select</option>
+                        <option value="MBA">MBA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                <!-- To Create Checkbox Button -->
+
+
+                <tr>
+                        <td>Alert By: </td>
+                        <td>
+                            <input type="checkbox" name="alertBy" id="alertBy" value="mobile">Mobile
+                            <input type="checkbox" name="alertBy" id="alertBy" value="email">Email
+                            <input type="checkbox" name="alertBy" id="alertBy" value="letters">Letters
+                        </td>
+                </tr>
+
+                <tr>
+                    <td>Photo</td>
+                    <td>
+                        <input type="file" name="a" id="a">
+                    </td>
+                </tr>
+
+
+
+
+
+
+                
+                <!-- To Create Submit and Reset button -->
+
+                <tr>
+                    <td align="center"><input type="submit" value="Submit"></td>
+                    <td align="center"><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
