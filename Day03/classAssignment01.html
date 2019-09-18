@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function feedback(){
+                var name=document.forms[0].elements[0].value
+                var address=document.forms[0].elements[1].value
+                s="";
+
+                if(name.length==0 || address.length==0){
+                    alert("Both the fields are mandatory")
+                    return false
+                }
+                if(yes.checked){
+                    s="Glad you like our website "
+                }
+                if(no.checked){
+                    s="Oops! You don't like our website "
+                }
+
+                s=s+",and you have chosen-{";
+                if(bgcolor.checked || fgcolor.checked ||layout.checked ||more.checked){
+                if(bgcolor.checked){
+                    s=s+document.getElementById("bgcolor").value
+                }
+                if(fgcolor.checked){
+                    s=s+"; "+document.getElementById("fgcolor").value
+                }
+                if(layout.checked){
+                    s=s+"; "+document.getElementById("layout").value
+                }
+                if(more.checked){
+                    s=s+"; "+document.getElementById("more").value
+                }
+                }
+                else{
+                    s=s+"nothing"
+                }
+                s=s+"} as an improvement"
+                alert(s)
+            }
+
+        </script>
+    </head>
+    <body>
+        <form action="success.html" onsubmit="return feedback()">
+            Name : <input type="text" name="name" id="name"><br><br>
+            Address : <input type="text" name="name" id="address"><br><br>
+            Do you like our site : <input type="radio" name="like" id="yes" value="Like" checked>Yes
+            <input type="radio" name="like" id="no" value="Don't Like">No
+            <br> <br>
+            Tell us how we can make this site better for you: <br><br>
+            <input type="checkbox" name="betterBy" id="bgcolor" value="Change the bg color">Change the bg color <br>
+            <input type="checkbox" name="betterBy" id="fgcolor" value="Change the fg color">Change the fg color <br>
+            <input type="checkbox" name="betterBy" id="layout" value="Change the layout">Change the layout <br>
+            <input type="checkbox" name="betterBy" id="more" value="Include more services">Include more services <br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+
+    </body>
+</html>
