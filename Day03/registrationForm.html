@@ -1,0 +1,163 @@
+<html>
+    <title>
+        DXC Registration Form
+    </title>
+    <head>
+            <script type="text/javascript">
+                function check(){
+                    var errorUsername=document.getElementById("errorUsername");
+                    var errorPassword=document.getElementById("errorPassword")
+                    var errorcPassword=document.getElementById("errorcPassword")
+                    var errorFullname=document.getElementById("errorFullname")
+                    var errorGender=document.getElementById("errorGender")
+                    var errorQual=document.getElementById("errorQual")
+                    var errorAlert=document.getElementById("errorAlert")
+                    var c=0
+
+                    with(document.forms[0]){
+                        if(userName.value==""){
+                            errorUsername.innerHTML="<font color=red>Username is mandatory</font>"
+                            c=1
+                        }
+                        else{
+                            errorUsername.innerHTML=""
+                        }
+                        if(password.value==""){
+                            errorPassword.innerHTML="<font color=red>Password is mandatory</font>"
+                            c=1
+                        }
+                        else{
+                            errorPassword.innerHTML=""
+                        }
+
+                        if(confirmPassword.value==""){
+                            errorcPassword.innerHTML="<font color=red>Please confirm the password</font>"
+                            c=1
+                        }
+                        else{
+                            errorcPassword.innerHTML=""
+                        }
+                        if(fullName.value==""){
+                            errorFullname.innerHTML="<font color=red>Enter Your Full name</font>"
+                            c=1
+                        }
+                        else{
+                            errorFullname.innerHTML=""
+                        }
+                        
+                        if(qualification.value== "Select"){
+                            errorQual.innerHTML="<font color=red>Atleast select one Qualification</font>"
+                            c=1
+                        }
+                        else{
+                            errorQual.innerHTML=""
+                        }
+                        var alertBySelected=false;
+                        for(i=0;i<3;i++){
+                            if(alertBy[i].checked){
+                                alertBySelected=true
+                                break
+                            }
+                        }
+                        if(alertBySelected==false){
+                            errorAlert.innerHTML="<font color=red>Please Select Atleast one alert method"
+                            c=1
+                        }
+
+                        if(!gender[0].checked && !gender[1].checked && !gender[2].checked){
+                            errorGender.innerHTML="<font color=red>Please Select Gender"
+                        }
+
+                         if(c==1){
+                             return false
+                    }
+                }
+            }
+            </script>
+    </head>
+
+    <body>
+        <h2>
+            <center><u>Registration Form</u></center>
+        </h2>
+
+        <!-- Form is used for controls on the page  -->
+
+        <form action="success.html" onsubmit="return check()">
+            <table cellspacing="10" cellpadding="10" align="center" bgcolor="#E9E3E1 ">
+               
+                <!-- Cellspacing is the spacing between two cells and Cell Padding is the spacing between text and the cell boarder -->
+                
+                <tr>
+                    <td>User Name:* </td>
+                    <td><input type="text" name="userName"> </td>
+                    <td><span id="errorUsername"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Password:* </td>
+                    <td><input type="password" name="password"> </td>
+                    <td><span id="errorPassword"></span></td>
+                </tr>
+
+                <tr>
+                    <td>Confirm Password:* </td>
+                    <td><input type="password" name="confirmPassword"> </td>
+                    <td><span id="errorcPassword"></span></td>
+
+                </tr>
+
+                <tr>
+                    <td>Full Name: </td>
+                    <td><input type="text" name="fullName"> </td>
+                    <td><span id="errorFullname"></span></td>
+                </tr>
+
+                <!-- To Create Radio Button -->
+
+                <tr>
+                    <td>Gender:* </td>
+                    <td>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="Others">Others
+                    </td>
+                    <td><span id="errorGender"></span></td>
+                </tr>
+
+                <!-- To Create Drop Down Button -->
+
+                <tr>
+                    <td>Qualification:* </td>
+                    <td>
+                        <select name="qualification">
+                        <option value="Select">Select</option>
+                        <option value="MBA">MBA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                        </select>
+                    </td>
+                    <td><span id="errorQual"></span></td>
+                </tr>
+                
+                <!-- To Create Checkbox Button -->
+
+
+                <tr>
+                        <td>Alert By:* </td>
+                        <td>
+                            <input type="checkbox" name="alertBy"  value="mobile">Mobile
+                            <input type="checkbox" name="alertBy"  value="email">Email
+                            <input type="checkbox" name="alertBy"  value="letters">Letters
+                        </td>
+                        <td><span id="errorAlert"></span></td>
+
+                </tr>
+                <tr>
+                    <td align="center"><input type="submit" value="Submit"></td>
+                    <td align="center"><input type="reset" value="Reset"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
