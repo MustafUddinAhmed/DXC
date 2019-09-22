@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 130px;
+                height: 130px;
+            }
+            div{
+                width: 150px;
+                height: 150px;
+                background: pink;
+                position: relative;
+
+                animation-name: abc;
+                animation-duration: 5s;
+                animation-timing-function: linear;
+                animation-delay: 2s;
+                animation-iteration-count:3; /*For how many iteration it will run*/
+                animation-direction:alternate-reverse;
+                animation-play-state:running;
+            }
+
+            @keyframes abc {
+                0% {background: pink;left: 0px;top: 0px;}
+                25% {background: lime;left: 400px;top: 0px;}
+                50% {background:orange;left: 400px;top: 200px;}
+                75% {background: green;left: 0px;top: 200px;}
+                100% {background:yellow;left: 0px;top: 0px;}
+                
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div> <img src="penguin.jpg"></div>
+
+    </body>
+</html>

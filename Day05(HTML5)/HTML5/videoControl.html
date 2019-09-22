@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <video controls height="340" width="640" id="myVideo">
+            <source src="Cyanide_.mp4" type="video/mp4">
+        </video><br>
+
+        <input type="button" name="button1" id="button1" value="Play/Pause" onclick="playPause()">
+        <input type="button" name="button2" id="button2" value="Big" onclick="makeBig()">
+        <input type="button" name="button3" id="button3" value="Small" onclick="makeSmall()">
+
+    </body>
+
+    <script type="text/javascript">
+        player=document.getElementById("myVideo");
+        
+        function playPause(){
+            if(player.paused){
+                player.play();
+            }    
+            else{
+                player.pause();
+            }       
+        }
+
+        function makeBig(){
+            player.width=1000;
+        }
+
+        function makeSmall(){
+            player.width=300;
+        }
+    </script>
+</html>
