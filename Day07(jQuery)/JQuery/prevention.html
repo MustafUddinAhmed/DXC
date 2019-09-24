@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("body").bind("cut copy paste", function(e) {
+          alert("Oh! you think you can pass me using your Keyboard");
+          e.preventDefault;
+        });
+
+        $("body").on("contextmenu", function(e) {
+          alert("I told ya, Don't even try to copy");
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>Alert: Don't Even Try to Copy me.</p>
+  </body>
+</html>

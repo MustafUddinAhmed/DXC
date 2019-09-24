@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#a").click(function() {
+          $("#b").slideToggle("fast");
+        });
+      });
+    </script>
+    <style type="text/css">
+      #a,
+      #b {
+        background-color: aquamarine;
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+      }
+
+      #b {
+        padding: 50px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="a">Click here to slide down panel information</div>
+    <div id="b">This contains some information</div>
+  </body>
+</html>
