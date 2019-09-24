@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#text").attr("maxlength", "25");
+
+        $("#text").keyup(updateCount);
+        $("#text").keydown(updateCount);
+
+        function updateCount() {
+          var cs = $(this).val().length;
+          console.log(cs);
+          $("#div1").text(25 - cs);
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    Enter your information: <input type="text" id="text" /><br /><br />
+    <div>
+      Be wise, You have only
+      <span id="div1">25</span>
+      character left
+    </div>
+  </body>
+</html>

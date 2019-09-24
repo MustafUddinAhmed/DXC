@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <head>
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#btnSubmit").attr("disabled", true);
+
+        $("#userName").keyup(updateUser);
+        $("#password").keyup(updatePass);
+
+        var username, password;
+
+        function updateUser() {
+          username = $(this).val().length;
+          enabled();
+        }
+
+        function updatePass() {
+          password = $(this).val().length;
+          enabled();
+        }
+
+        //Button Enabled Function
+        function enabled() {
+          if (username && password) {
+            $("#btnSubmit").attr("disabled", false);
+          } else {
+            $("#btnSubmit").attr("disabled", true);
+          }
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="container m-4">
+      <form id="formABC" action="#" method="POST">
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="userName"
+            placeholder="Enter your Email"
+          />
+        </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            placeholder="Enter your Password"
+          />
+        </div>
+        <br />
+        <br />
+        <input type="submit" id="btnSubmit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
