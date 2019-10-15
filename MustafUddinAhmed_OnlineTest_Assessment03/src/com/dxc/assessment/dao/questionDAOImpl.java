@@ -62,10 +62,4 @@ public class questionDAOImpl implements questionDAO {
 		return allQuestions;
 	}
 
-	@Override
-	public int checkAnswer() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }
