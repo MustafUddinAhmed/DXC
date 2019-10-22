@@ -1,0 +1,108 @@
+import React, { Component } from "react";
+import Card from "./Card";
+
+export default class Dropdown extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      description: "",
+      a: "",
+      b: "",
+      list: []
+    };
+  }
+
+  ChangeName = e => {
+    e.preventDefault();
+    this.setState({
+      name: e.target.value
+    });
+  };
+  ChangeDescription = e => {
+    e.preventDefault();
+    this.setState({
+      description: e.target.value
+    });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+    var cards = {
+      name: this.state.name,
+      description: this.state.description
+    };
+    this.setState({
+      list: this.state.list.push(cards),
+      a: this.state.name,
+      b: this.state.description
+    });
+
+    console.log(this.state.list);
+  };
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.onSubmit}>
+          <label>Company Name</label>
+          <input
+            type="text"
+            value={this.state.name}
+            onChange={this.ChangeName}
+          />
+          <label>Company Description</label>
+          <textarea
+            value={this.state.description}
+            onChange={this.ChangeDescription}
+          />
+          <input type="submit" value="Submit" />
+        </form>
+        <br></br>
+        <Card name={this.state.a} description={this.state.b} />
+      </div>
+    );
+  }
+}
+
+
+----------------------------------------------------------------------------
+
+
+import React, { Component } from "react";
+
+const Card = ({ name, description }) => {
+  return (
+    <div>
+      <div className="accordion" id="accordionExample">
+        <div className="card">
+          <div className="card-header" id="headingOne">
+            <h2 className="mb-0">
+              <button
+                className="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                {name}
+              </button>
+            </h2>
+          </div>
+
+          <div
+            id="collapseOne"
+            className="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordionExample"
+          >
+            <div className="card-body">{description}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Card;
