@@ -2,8 +2,7 @@
 
 Topics covered-
 
-HTML5  
-CSS
+HTML5, CSS
 Bootstrap
 Javascript
 jQuery
@@ -23,13 +22,4 @@ Indexes
 Bulk Operations 
 Pluggable Storage Engines 
 Java Driver 
-Mongo as Shards 
-Authentication Mechanisms in MongoDB 
-Configuration 
-Microservices
-Hibernate
-Spring Testing
-Maven and GIT
-Cloud Native AWS
-Python
-Summative Project
+Mongo as Shards , Authentication Mechanisms in MongoDB , Configuration,Microservices,Hibernate,Spring Testing,Maven and GIT,Cloud Native AWS,Python,Summative Project
