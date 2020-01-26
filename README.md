@@ -1,4 +1,4 @@
-"# DXC Technology Training" 
+## DXC Technology Training
 
 Topics covered-
 
@@ -23,3 +23,9 @@ Bulk Operations ,
 Pluggable Storage Engines ,
 Java Driver ,
 Mongo as Shards , Authentication Mechanisms in MongoDB , Configuration,Microservices,Hibernate,Spring Testing,Maven and GIT,Cloud Native AWS,Python,Summative Project
+
+
+### Project covered in the curriculum
+
+1. Full Stack Asset Management App
+2. Hospital management system (CRUD operation)
